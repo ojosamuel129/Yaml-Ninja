@@ -44,6 +44,7 @@ Creating and managing project files
 
 📂 Project Structure
 The project is organised around the Kubernetes manifest:
+
 yaml-architect/
 ├── .git/
 ├── README.md
@@ -156,6 +157,7 @@ This configuration describes a Kubernetes Pod called nginx-pod with one containe
 
 🔎 Breaking Down the Manifest
 The final YAML can be understood from the top down:
+
 apiVersion
     │
     └── Kubernetes API version
@@ -292,6 +294,7 @@ Add more advanced Git workflows
 🏁 Project Outcome
 The completed project demonstrates my understanding of the fundamentals of Kubernetes YAML configuration.
 I created a Git-controlled project containing a Kubernetes Pod manifest that defines:
+
 Pod
  └── nginx-pod
       └── nginx container
@@ -309,5 +312,6 @@ Infrastructure as Code
 Linux/terminal commands
 Configuration management
 Technical documentation
-Built as part of my hands-on Kubernetes learning journey. ☸️
+
+This is built as part of my hands-on Kubernetes learning journey. ☸️
 
