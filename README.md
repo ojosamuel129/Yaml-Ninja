@@ -11,34 +11,6 @@ The objective was to build a Kubernetes Pod manifest from the ground up while le
 Rather than creating the complete configuration in one step, I built the manifest progressively. This helped me understand how Kubernetes uses API versions, resource types, metadata, specifications, lists, and indentation to define the desired state of a workload.
 The final configuration creates a Pod named nginx-pod containing an Nginx container using the nginx:latest image.
 
-🎯 Objectives
-During this project, I worked on:
-Creating a dedicated project workspace
-Initialising a Git repository
-Creating a Kubernetes YAML manifest
-Understanding apiVersion
-Defining a Kubernetes resource with kind
-Adding resource metadata
-Naming a Kubernetes Pod
-Understanding YAML nesting and indentation
-Creating a container list
-Defining a container name
-Specifying a container image
-Applying Infrastructure as Code concepts
-Organising configuration for version control
 
-🧰 Technologies & Tools
-Technology
-Purpose
-Kubernetes
-Container orchestration platform
-YAML
-Kubernetes configuration format
-Git
-Version control
-Nginx
-Container image used by the Pod
-Terminal
-Creating and managing project files
 
 
