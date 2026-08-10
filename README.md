@@ -1,5 +1,9 @@
+# ☸️ How to create a Kubernetes Pod Manifest
 
-# ☸️ Kubernetes YAML Architect
+![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)
+![Version: 1.0.0-beta](https://img.shields.io/badge/Version-1.0.0--beta-green)
+![AI: Provider Agnostic](https://img.shields.io/badge/AI-Provider%20Agnostic-blueviolet)
+![Preferred: Azure OpenAI](https://img.shields.io/badge/Preferred-Azure%20OpenAI-0078D4?logo=microsoft-azure)
 
 📌 Project Overview
 This project is a hands-on introduction to Kubernetes YAML configuration and Infrastructure as Code principles.
@@ -37,6 +41,7 @@ Container image used by the Pod
 Terminal
 Creating and managing project files
 
+
 📂 Project Structure
 The project is organised around the Kubernetes manifest:
 yaml-architect/
@@ -47,9 +52,9 @@ yaml-architect/
 The main configuration file is:
 pod.yaml
 
+
 🏗️ Building the Kubernetes Manifest
 The manifest was created incrementally to understand what each section contributes to a Kubernetes resource.
-
 1. Project Setup
 First, I created a dedicated directory for the project:
 mkdir -p ~/yaml-architect
@@ -61,7 +66,7 @@ git init
 
 Using Git allows changes to the infrastructure configuration to be tracked over time.
 
-1. Defining the API Version
+2. Defining the API Version
 The first entry in pod.yaml is:
 apiVersion: v1
 
@@ -70,7 +75,8 @@ For this Pod, the core Kubernetes API version is v1.
 The file was initially created with:
 echo "apiVersion: v1" > pod.yaml
 
-1. Defining the Resource Type
+
+3. Defining the Resource Type
 Next, I specified that the resource should be a Pod:
 kind: Pod
 
@@ -82,7 +88,8 @@ At this stage, the manifest contained:
 apiVersion: v1
 kind: Pod
 
-1. Adding Metadata
+
+4. Adding Metadata
 Kubernetes resources use metadata to store identifying information.
 I added:
 metadata:
@@ -97,7 +104,8 @@ The two spaces before name indicate that name belongs to the metadata section.
 The Pod therefore has the name:
 nginx-pod
 
-1. Defining the Pod Specification
+
+5. Defining the Pod Specification
 The spec section describes the desired configuration of the Pod.
 I added:
 spec:
@@ -107,7 +115,7 @@ echo "spec:" >> pod.yaml
 
 The spec section separates the resource's identifying information from its desired configuration.
 
-1. Creating the Containers List
+6. Creating the Containers List
 A Pod can contain one or more containers, so the container configuration is represented as a YAML list.
 I added:
 spec:
@@ -117,7 +125,6 @@ using:
 echo "  containers:" >> pod.yaml
 
 The next line creates the first item in the list:
-
 - name: nginx
 
 using:
@@ -125,7 +132,7 @@ echo "  - name: nginx" >> pod.yaml
 
 The - character represents an item in a YAML list.
 
-1. Configuring the Nginx Container
+7. Configuring the Nginx Container
 Finally, I specified the container image:
 image: nginx:latest
 
@@ -142,8 +149,7 @@ metadata:
   name: nginx-pod
 spec:
   containers:
-
-- name: nginx
+  - name: nginx
     image: nginx:latest
 
 This configuration describes a Kubernetes Pod called nginx-pod with one container named nginx.
@@ -194,6 +200,7 @@ Names the container
 containers.image
 Specifies the container image
 
+
 🧩 YAML Concepts Practised
 Key-Value Pairs
 Basic YAML properties use a key followed by a value:
@@ -208,7 +215,6 @@ Here, name is nested inside metadata.
 Lists
 A hyphen creates an item within a YAML list:
 containers:
-
 - name: nginx
 
 Indentation
@@ -216,8 +222,7 @@ YAML relies on indentation to represent structure.
 For example:
 spec:
   containers:
-
-- name: nginx
+  - name: nginx
     image: nginx:latest
 
 The indentation shows which properties belong to the Pod specification and which belong to the container.
@@ -237,7 +242,6 @@ For example, future changes to pod.yaml can be committed separately as the Kuber
 
 💡 Key Learnings
 This project helped reinforce several fundamental Kubernetes concepts.
-
 1. Kubernetes configuration is declarative
 Instead of manually describing every action Kubernetes should perform, the YAML describes the desired state of the resource.
 2. YAML structure matters
@@ -305,5 +309,5 @@ Infrastructure as Code
 Linux/terminal commands
 Configuration management
 Technical documentation
-
 Built as part of my hands-on Kubernetes learning journey. ☸️
+
